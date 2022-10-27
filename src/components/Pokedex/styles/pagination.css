@@ -1,0 +1,35 @@
+.pagination{
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.pagination_container{
+    display: flex;
+    gap: 5px;
+}
+.pagination_page, .pagination_prev, .pagination_next {
+    width: 30px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.pagination_active{
+    background-color: var(--color-red);
+    color: white;
+    border-radius: 5px;
+    border: solid 2px  black;
+}
+.pagination_next{
+    border-radius: 50%;
+    border: none;
+}
+.pagination_prev{
+    transform: rotate(-180deg);
+    border-radius: 50%;
+    border: none;
+}

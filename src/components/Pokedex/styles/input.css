@@ -1,0 +1,16 @@
+.input{
+    width: 32vw;
+    max-width: 250px;
+    border-bottom: 1px solid var(--color-red);
+    height: 40px;
+}
+.input_button{
+    height: 40px;
+    background-color: var(--color-red);
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+.input_button:hover{
+    background-color: rgb(167, 43, 43);
+}

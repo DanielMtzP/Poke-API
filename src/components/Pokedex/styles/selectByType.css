@@ -1,0 +1,17 @@
+.select{
+    width: 30vw;
+    border: none;
+    border-bottom: 1px solid var(--color-red);
+    max-width: 130px;
+    padding: 5px;
+}
+option{
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--color-red);
+    padding: 15px;
+}
+.select:hover {background-color:whitesmoke; color:black}
+
+.select::-webkit-scrollbar {
+    display: none;
+}
