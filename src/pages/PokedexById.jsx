@@ -31,24 +31,24 @@ const PokedexById = () => {
   
 
   return (
-    <article >
+    <article className='PokeById' >
       <header className='header_pokedex'>
         <img className='pokedex_img' src='/images/home/pokedex.png'/>
       </header>
       <main className='pokeIdCard'>
-        <header>
+        <section>
           <div className={`card bg-${pokemon?.types[0].type.name}`}>
             <img className='poke_img' src={pokemon?.sprites.other['official-artwork'].front_default} alt='' />
           </div>
-        </header>
-        <section>
+        </section>
+        <section className='pokeinf'>
           <h1 className={`pokedex_number card-poke_name letter-${pokemon?.types[0].type.name}`}>#{pokemon?.id}</h1>
           <h2 className={`poke_name letter-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h2>
           <div className='features'>
-            <h3 className='weight'>Weight<br></br>{pokemon?.weight}</h3>
-            <h3 className='height'>Height<br></br>{pokemon?.height}</h3>
+            <h3 className='weight'><span className='features_span'>Weight</span> {pokemon?.weight}</h3>
+            <h3 className='height'><span className='features_span'>Height</span>{pokemon?.height}</h3>
           </div>
-          <div>
+          <div className='pokeinf_more'>
             <div className='types_container'>
               <h2 className='title_type'>Type</h2>
               <ul className='ul_type'>
@@ -57,31 +57,31 @@ const PokedexById = () => {
                   }
               </ul>
             </div>
-            <div>
-              <h2>Abilities</h2>
-              <ul>
+            <div className='abilities_container'>
+              <h2 className='title_abilities'>Abilities</h2>
+              <ul className='ul_ability'>
                   {
-                      pokemon?.abilities.map(ability => (<li key={ability.slot}>{ability.ability.name}</li>))
+                      pokemon?.abilities.map(ability => (<li className='ability_poke' key={ability.slot}>{ability.ability.name}</li>))
                   }
               </ul>
             </div>
-            <div>
-              <h2>Stats</h2>
-              <ul>
+            <div className='stats_container'>
+              <h2 className='title_stats'>Stats</h2>
+              <ul className='ul_stats'>
                 {
                     pokemon?.stats.map(stat => (
-                        <li key={stat.stat.name}>
-                            <span>{stat.stat.name}</span> <span >{stat.base_stat}</span>
+                        <li className='stats_poke' key={stat.stat.name}>
+                            <span>{stat.stat.name}:</span> <span >{stat.base_stat}/255</span>
                         </li>
                     ))
                 }
               </ul>
             </div>
-            <div>
-              <h2>Moves</h2>
-              <ul>
+            <div className='moves_container'>
+              <h2 className='title_moves'>Moves</h2>
+              <ul className='ul_moves'>
                   {
-                      pokemon?.moves.map(move => (<li key={move.move.name}>{move.move.name}</li>))
+                      pokemon?.moves.map(move => (<li className='moves_poke' key={move.move.name}>{move.move.name}</li>))
                   }
               </ul>
             </div>

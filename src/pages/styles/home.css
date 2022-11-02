@@ -23,6 +23,7 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
 }
 .pokedex_input{
     padding: 10px 20px;
